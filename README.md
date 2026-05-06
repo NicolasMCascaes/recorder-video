@@ -1,3 +1,9 @@
+![Electron](https://img.shields.io/badge/Electron-47848F?style=for-the-badge&logo=electron&logoColor=white)
+![React](https://img.shields.io/badge/React-61DAFB?style=for-the-badge&logo=react&logoColor=000000)
+![TypeScript](https://img.shields.io/badge/TypeScript-3178C6?style=for-the-badge&logo=typescript&logoColor=white)
+![Rust](https://img.shields.io/badge/Rust-000000?style=for-the-badge&logo=rust&logoColor=white)
+![FFmpeg](https://img.shields.io/badge/FFmpeg-007808?style=for-the-badge&logo=ffmpeg&logoColor=white)
+
 # Recorder Video
 
 Recorder Video é um gravador de tela para Windows focado em clareza. Ele captura o vídeo sem o cursor nativo, registra o movimento e os cliques do mouse com um sidecar nativo e gera um export com zoom inteligente nos momentos de atenção. O objetivo é entregar gravações profissionais sem exigir um editor pesado.
@@ -5,12 +11,6 @@ Recorder Video é um gravador de tela para Windows focado em clareza. Ele captur
 O app mantém os dados organizados por projeto: captura bruta + timeline de eventos do cursor + presets de exportação. Toda ação visível na interface executa algo real, mantendo o produto funcional em todas as etapas.
 
 ## Stack
-
-![Electron](https://img.shields.io/badge/Electron-47848F?style=for-the-badge&logo=electron&logoColor=white)
-![React](https://img.shields.io/badge/React-61DAFB?style=for-the-badge&logo=react&logoColor=000000)
-![TypeScript](https://img.shields.io/badge/TypeScript-3178C6?style=for-the-badge&logo=typescript&logoColor=white)
-![Rust](https://img.shields.io/badge/Rust-000000?style=for-the-badge&logo=rust&logoColor=white)
-![FFmpeg](https://img.shields.io/badge/FFmpeg-007808?style=for-the-badge&logo=ffmpeg&logoColor=white)
 
 - Electron fornece o shell desktop e a camada de janelas no Windows.
 - React e TypeScript sustentam a UI, preview e edição.
