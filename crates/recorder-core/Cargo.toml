@@ -1,0 +1,15 @@
+[package]
+name = "recorder-core"
+version = "0.1.0"
+edition = "2024"
+
+[dependencies]
+windows-sys = { version = "0.61", features = [
+  "Win32_Foundation",
+  "Win32_UI_Input_KeyboardAndMouse",
+  "Win32_UI_WindowsAndMessaging"
+] }
+
+[[bin]]
+name = "recorder-core"
+path = "src/main.rs"
