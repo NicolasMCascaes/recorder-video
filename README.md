@@ -1,52 +1,50 @@
 # Recorder Video
 
-Recorder Video is a Windows-first screen recorder focused on clarity. It captures the screen with cursor-free raw video, tracks mouse movement and clicks with a native sidecar, and renders a polished export with smart zoom around attention moments. The goal is to deliver a clean, professional recording without forcing you into a heavyweight editor.
+Recorder Video é um gravador de tela para Windows focado em clareza. Ele captura o vídeo sem o cursor nativo, registra o movimento e os cliques do mouse com um sidecar nativo e gera um export com zoom inteligente nos momentos de atenção. O objetivo é entregar gravações profissionais sem exigir um editor pesado.
 
-It ships as a desktop app and keeps project data organized: raw capture + a timeline of cursor events + export presets. Every visible control in the UI is wired to real behavior, so the product is always functional, even while features are still evolving.
+O app mantém os dados organizados por projeto: captura bruta + timeline de eventos do cursor + presets de exportação. Toda ação visível na interface executa algo real, mantendo o produto funcional em todas as etapas.
 
 ## Stack
 
-<p>
-	<img alt="Electron" src="https://cdn.simpleicons.org/electron/47848F" width="28" height="28" />
-	<img alt="React" src="https://cdn.simpleicons.org/react/61DAFB" width="28" height="28" />
-	<img alt="TypeScript" src="https://cdn.simpleicons.org/typescript/3178C6" width="28" height="28" />
-	<img alt="Rust" src="https://cdn.simpleicons.org/rust/000000" width="28" height="28" />
-	<img alt="FFmpeg" src="https://cdn.simpleicons.org/ffmpeg/007808" width="28" height="28" />
-</p>
+![Electron](https://img.shields.io/badge/Electron-47848F?style=for-the-badge&logo=electron&logoColor=white)
+![React](https://img.shields.io/badge/React-61DAFB?style=for-the-badge&logo=react&logoColor=000000)
+![TypeScript](https://img.shields.io/badge/TypeScript-3178C6?style=for-the-badge&logo=typescript&logoColor=white)
+![Rust](https://img.shields.io/badge/Rust-000000?style=for-the-badge&logo=rust&logoColor=white)
+![FFmpeg](https://img.shields.io/badge/FFmpeg-007808?style=for-the-badge&logo=ffmpeg&logoColor=white)
 
-- Electron provides the Windows desktop shell and native windowing.
-- React and TypeScript power the full editing and preview experience.
-- Rust handles native capture tasks and cursor event tracking.
-- FFmpeg drives the initial export pipeline.
+- Electron fornece o shell desktop e a camada de janelas no Windows.
+- React e TypeScript sustentam a UI, preview e edição.
+- Rust lida com captura nativa e timeline do cursor.
+- FFmpeg gera o MP4 final com presets de exportação.
 
-## What It Does
+## O Que Faz
 
-- Records display video while suppressing the native cursor.
-- Captures mouse movement and clicks in a high-resolution timeline.
-- Creates automatic or manual zoom segments around moments of interest.
-- Renders an export with a custom cursor, background, and framing.
-- Keeps projects and exports organized under the Videos folder.
+- Grava a tela sem o cursor nativo do sistema.
+- Captura movimentos e cliques em alta resolução temporal.
+- Cria zoom automático ou manual nos momentos relevantes.
+- Renderiza export com cursor customizado, fundo e enquadramento.
+- Organiza projetos e exports na pasta de Vídeos.
 
-## How It Works
+## Como Funciona
 
-1. The desktop app coordinates capture and stores a project directory.
-2. The Rust sidecar emits cursor events as JSON lines.
-3. The renderer previews edits and produces a render stream.
-4. FFmpeg encodes the final MP4 with a chosen preset.
+1. O desktop app coordena a captura e cria o diretório do projeto.
+2. O sidecar em Rust emite eventos do cursor como linhas JSON.
+3. O renderer faz o preview e produz o stream de render.
+4. O FFmpeg codifica o MP4 final com o preset escolhido.
 
-Projects store raw media and editing metadata separately:
+Os projetos guardam mídia bruta e metadados separadamente:
 
-- `capture.webm` or `capture.mp4`: raw recording
-- `timeline.json`: cursor events and zoom instructions
-- `assets/`: derived assets such as thumbnails
+- `capture.webm` ou `capture.mp4`: gravação base
+- `timeline.json`: eventos do cursor e instruções de zoom
+- `assets/`: derivados como thumbnails
 
-## Product Principles
+## Princípios do Produto
 
-- Every visible UI control triggers real behavior.
-- Focus on clean capture, clear motion, and fast export.
-- Keep the experience Windows-native and reliable.
+- Nenhum controle visível fica sem ação real.
+- Foco em captura limpa, movimento claro e export rápido.
+- Experiência nativa e confiável no Windows.
 
-## Commands
+## Comandos
 
 ```powershell
 pnpm install
@@ -54,10 +52,10 @@ pnpm dev
 pnpm check
 ```
 
-## Structure
+## Estrutura
 
 ```text
-apps/desktop           Electron + React desktop app
-crates/recorder-core   Rust capture and cursor sidecar
-docs                   Product architecture and roadmap
+apps/desktop           App desktop Electron + React
+crates/recorder-core   Sidecar Rust de captura e cursor
+docs                   Arquitetura e roadmap do produto
 ```
