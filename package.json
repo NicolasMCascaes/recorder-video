@@ -1,0 +1,14 @@
+{
+  "name": "recorder-video",
+  "version": "0.1.0",
+  "private": true,
+  "packageManager": "pnpm@10.33.2",
+  "scripts": {
+    "dev": "pnpm --filter @recorder/desktop dev",
+    "build": "pnpm --filter @recorder/desktop build",
+    "preview": "pnpm --filter @recorder/desktop preview",
+    "typecheck": "pnpm --filter @recorder/desktop typecheck",
+    "native:check": "cargo check --manifest-path crates/recorder-core/Cargo.toml",
+    "check": "pnpm typecheck && pnpm native:check"
+  }
+}
